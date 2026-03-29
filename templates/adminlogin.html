@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin:0;
+    font-family:'Segoe UI';
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    color:white;
+}
+
+.card {
+    background:rgba(255,255,255,0.1);
+    padding:30px;
+    border-radius:20px;
+    width:300px;
+    backdrop-filter:blur(10px);
+    text-align:center;
+    animation:fade 1s;
+}
+
+input {
+    width:90%;
+    padding:10px;
+    margin:10px;
+    border:none;
+    border-radius:10px;
+}
+
+button {
+    padding:10px;
+    width:95%;
+    border:none;
+    border-radius:20px;
+    background:#00c6ff;
+    color:white;
+}
+
+.error {color:red;}
+
+@keyframes fade {
+    from {opacity:0; transform:scale(0.9);}
+    to {opacity:1;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+<h2>🔐 Admin Login</h2>
+
+<form method="POST">
+<input name="username" placeholder="Username">
+<input type="password" name="password" placeholder="Password">
+<button>Login</button>
+</form>
+
+<p class="error">{{ error }}</p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin:0;
+    font-family:'Segoe UI';
+    background:linear-gradient(135deg,#1f4037,#99f2c8);
+    color:white;
+}
+
+.app {
+    max-width:420px;
+    margin:auto;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+.header {
+    text-align:center;
+    padding:15px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.chatbox {
+    flex:1;
+    padding:10px;
+    overflow-y:auto;
+}
+
+.msg {
+    padding:10px;
+    border-radius:15px;
+    margin:5px;
+}
+
+.user {background:#00c6ff; text-align:right;}
+.bot {background:#1f4037; text-align:left;}
+
+.inputbox {display:flex; padding:10px;}
+
+input {flex:1; padding:10px; border-radius:20px; border:none;}
+button {padding:10px; border:none; border-radius:20px; background:#00c6ff;}
+
+.options button {margin:5px;}
+
+.footer {
+    text-align:center;
+    font-size:12px;
+    padding:10px;
+}
+
+a {color:white;}
+</style>
+
+</head>
+
+<body>
+
+<div class="app">
+
+<div class="header">
+🎓 SHANTINIKETAN College Helpdesk  
+<br>Welcome, Student 👋
+</div>
+
+<div class="chatbox">
+<div class="msg user">{{ user_input }}</div>
+<div class="msg bot">{{ response }}</div>
+</div>
+
+<div class="options">
+<form method="POST">
+<button name="question" value="fees">Fees</button>
+<button name="question" value="timetable">Timetable</button>
+<button name="question" value="exam">Exam</button>
+<button name="question" value="holiday">Holiday</button>
+<button name="question" value="admission">Admission</button>
+<button name="question" value="library">Library</button>
+<button name="question" value="placement">Placement</button>
+</form>
+</div>
+
+<form method="POST" class="inputbox">
+<input name="question" placeholder="Ask something...">
+<button>Send</button>
+</form>
+
+<div style="text-align:center;">
+<a href="/complaint">Complaint</a> |
+<a href="/adminlogin">Admin</a> |
+<a href="/logout">Logout</a>
+</div>
+
+<div class="footer">
+📧 aswadcollege@gmail.com | 📞 8010075056  
+<br>© 2026 SHANTINIKETAN College Helpdesk 
+<br>Developed by axwxd
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin:0;
+    font-family:'Segoe UI';
+    background:#0f2027;
+    color:white;
+}
+
+.container {
+    max-width:400px;
+    margin:auto;
+    padding:15px;
+}
+
+.header {
+    text-align:center;
+    font-size:22px;
+    margin-bottom:10px;
+}
+
+.card {
+    background:#203a43;
+    padding:15px;
+    margin:10px 0;
+    border-radius:15px;
+    animation:fade 0.5s;
+}
+
+.delete {
+    color:red;
+    text-decoration:none;
+}
+
+@keyframes fade {
+    from {opacity:0; transform:translateY(10px);}
+    to {opacity:1;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">📊 Admin Dashboard</div>
+
+{% for row in data %}
+<div class="card">
+{{ row[1] }}
+<br><br>
+<a class="delete" href="/delete/{{ row[0] }}">Delete ❌</a>
+</div>
+{% endfor %}
+
+<div style="text-align:center;margin-top:10px;">
+<a href="/home" style="color:white;">⬅ Back</a>
+</div>
+
+</div>
+
+</body>
+</html>

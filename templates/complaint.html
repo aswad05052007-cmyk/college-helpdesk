@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complaint</title>
+
+<style>
+body {
+    margin:0;
+    font-family:'Segoe UI';
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.box {
+    background:rgba(255,255,255,0.1);
+    padding:25px;
+    border-radius:20px;
+    width:320px;
+    backdrop-filter:blur(10px);
+    text-align:center;
+    animation:fade 1s;
+}
+
+textarea {
+    width:90%;
+    height:100px;
+    border:none;
+    border-radius:10px;
+    padding:10px;
+    margin:10px;
+}
+
+button {
+    padding:10px 20px;
+    border:none;
+    border-radius:20px;
+    background:#00c6ff;
+    color:white;
+    cursor:pointer;
+}
+
+.msg {
+    margin-top:10px;
+    color:#00ffcc;
+}
+
+@keyframes fade {
+    from {opacity:0; transform:translateY(20px);}
+    to {opacity:1;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+<h2>📝 Submit Complaint</h2>
+
+<form method="POST">
+<textarea name="complaint" placeholder="Write your issue..."></textarea><br>
+<button>Submit</button>
+</form>
+
+<div class="msg">{{ msg }}</div>
+
+<br>
+<a href="/home" style="color:white;">⬅ Back</a>
+</div>
+
+</body>
+</html>
